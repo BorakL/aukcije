@@ -1,0 +1,28 @@
+{% extends "_global/index.html" %}
+
+{% block main %}
+    <ul>
+        {% for auction in auctionsInCategory %}
+        <li class="auction">
+            <a href="/tairApp/auction/{{ auction.auction_id }}" class="auction-title">
+                {{ auction.title|escape }}
+            </a>
+            
+            <span class="auction-date1">{{ auction.starts_at|escape }}</span>
+            <span class="auction-date2">{{ auction.ends_at|escape }}</span>
+            <span class="auction-price">{{ auction.starting_price|escape }} &euro;</span>
+            
+            <a href="/tairApp/auction/{{ auction.auction_id }}">
+                <img src="#" alt="Velika slika - {{auction.auction_id}}" class="auction-big-image">
+            </a>
+            
+            <img src="#" alt="Mala slika 1 - {{auction.auction_id}}" class="auction-small-image-1">
+            <img src="#" alt="Mala slika 2 - {{auction.auction_id}}" class="auction-small-image-2">
+        </li>
+        {% endfor %}
+    </ul>
+{% endblock %}
+
+{% block naslov %}
+{{category.name}}
+{% endblock %}

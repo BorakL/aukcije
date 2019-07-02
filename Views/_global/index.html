@@ -1,0 +1,44 @@
+<html>
+    <head>
+        <title>Ta&amp;Ta - {% block naslov %} Pocetna {% endblock %}</title>
+        <meta>
+        <link rel="stylesheet" href="/tairapp/assets/css/main.css" >
+    </head>
+    <body>
+        <header class="site-header">
+            <div class="banners">
+                <a href="/" class="banner">
+                    <img src="/assets/img/banner-1.jpg" alt="Banner">
+                </a>
+            </div>
+            <div class="social-icons">
+                <a href="#"><img src="/assets/img/social/linkedin.png" alt="Li"></a>
+                <a href="#"><img src="/assets/img/social/facebook.png" alt="Fb"></a>
+                <a href="#"><img src="/assets/img/social/twitter.png" alt="Tw"></a>
+                <a href="#"><img src="/assets/img/social/google-plus.png" alt="Gp"></a>
+                <a href="#"><img src="/assets/img/social/youtube.png" alt="YT"></a>
+            </div>
+            <div class="search-box">
+                <form method="post" action="/search">
+                    <input type="text" name="q" placeholder="kljucne reci pretrage">
+                    <button type="submit">Search</button>
+                </form>
+            </div>
+            <nav id="main-menu">
+                <ul>
+                    <li><a href="/tairApp"> Pocetna </a></li>
+                    <li><a href="/tairApp/category"> Kategorije </a></li>
+                    <li><a href="/profile"> Profil </a></li>
+                    <li><a href="/contact"> Kontakt </a></li>
+                    <li><a href="/log-out"> Odjava </a></li>
+                </ul>
+            </nav>
+
+        </header>
+        <main>
+            {% block main %}
+            {% endblock %}
+        </main>
+        <footer class="site-footer">&copy; 2018 - Aukcijska kuca Ta&amp;Ta</footer>
+    </body>
+</html>

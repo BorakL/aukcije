@@ -1,0 +1,12 @@
+
+{% extends "_global/index.html" %}
+
+{% block main %}
+<div class="categories">
+        {% for category in categories %}
+        <a href="/tairApp/category/{{category.category_id}}" class="category">
+            {{category.name|escape}}
+        </a>
+        {% endfor %}
+</div>
+{% endblock %}
